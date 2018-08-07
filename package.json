@@ -1,0 +1,30 @@
+{
+  "name": "declarative-db",
+  "version": "0.1.0",
+  "description": "An easy-to-use declarative json-based database",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Loarca/declarative-db.git"
+  },
+  "keywords": [
+    "json",
+    "declarative",
+    "database",
+    "db",
+    "js",
+    "javascript",
+    "disk",
+    "easy",
+    "simple"
+  ],
+  "author": "Alejandro Loarca",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Loarca/declarative-db/issues"
+  },
+  "homepage": "https://github.com/Loarca/declarative-db#readme"
+}
