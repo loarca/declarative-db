@@ -26,5 +26,8 @@
   "bugs": {
     "url": "https://github.com/Loarca/declarative-db/issues"
   },
-  "homepage": "https://github.com/Loarca/declarative-db#readme"
+  "homepage": "https://github.com/Loarca/declarative-db#readme",
+  "devDependencies": {
+    "eslint": "^5.3.0"
+  }
 }
