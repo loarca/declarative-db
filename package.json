@@ -22,7 +22,8 @@
     "javascript",
     "disk",
     "easy",
-    "simple"
+    "simple",
+    "node"
   ],
   "author": "Alejandro Loarca",
   "license": "MIT",
