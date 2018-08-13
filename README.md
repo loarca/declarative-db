@@ -1,5 +1,5 @@
 # declarative-db
-An easy-to-use declarative json-based database
+An easy-to-use declarative json-based database for Node
 
 ## To do
 - Documentation
