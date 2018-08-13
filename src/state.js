@@ -3,6 +3,9 @@ const zlib = require('zlib');
 const { promisify } = require('util');
 const Mutex = require('async-mutex').Mutex;
 
+const MAX_UNSAVED_CHANGES = 1000;
+const MAX_UNSAVED_TIMEOUT = 60 * 1000;
+
 class State {
   constructor({state, filename, compression}) {
     this.state = state;
@@ -10,6 +13,8 @@ class State {
     this.compression = compression;
 
     this.mutex = new Mutex();
+    this.savingID = null;
+    this.unsavedChanges = 0;
   }
 
   setState(state) {
@@ -21,8 +26,23 @@ class State {
   }
 
   scheduleSaving() {
-    // Schedule saving to disk
-    this.saveToDisk();
+    this.unsavedChanges++;
+
+    // If unsaved changes limit is exceeded, save state immediately
+    if (this.unsavedChanges >= MAX_UNSAVED_CHANGES) {
+      clearTimeout(this.savingID);
+      this.savingID = null;
+      this.unsavedChanges = 0;
+      this.saveToDisk();
+    } else {
+      // Schedule saving to disk
+      clearTimeout(this.savingID);
+      this.savingID = setTimeout(() => {
+        this.savingID = null;
+        this.unsavedChanges = 0;
+        this.saveToDisk();
+      }, MAX_UNSAVED_TIMEOUT);
+    }
   }
 
   async saveToDisk() {
