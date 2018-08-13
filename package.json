@@ -1,6 +1,6 @@
 {
   "name": "declarative-db",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "An easy-to-use declarative json-based database",
   "main": "src/index.js",
   "engines": {
