@@ -91,6 +91,6 @@ Levels from `1` to `9` match DEFLATE compression levels
 ## To do
 - Documentation
 - Extensive testing
-- Smart scheduled saving
+- *~~Smart scheduled saving~~*
 - Protect scheduled saving from unexpected process termination
 - When `filename` option is not present, manage database in memory
