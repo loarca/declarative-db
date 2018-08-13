@@ -1,12 +1,15 @@
 const fs = require('fs');
 const zlib = require('zlib');
 const { promisify } = require('util');
+const Mutex = require('async-mutex').Mutex;
 
 class State {
   constructor({state, filename, compression}) {
     this.state = state;
     this.filename = filename;
     this.compression = compression;
+
+    this.mutex = new Mutex();
   }
 
   setState(state) {
@@ -23,7 +26,12 @@ class State {
   }
 
   async saveToDisk() {
+    let unlock = () => null;
+
     try {
+      // Lock mutex to protect saving to disk
+      unlock = await this.mutex.acquire();
+
       // Get string data
       let data = JSON.stringify(this.state, null, this.compression ? null : 2);
 
@@ -36,6 +44,9 @@ class State {
       await promisify(fs.writeFile)(this.filename, data);
     } catch (err) {
       console.error('[declarative-db]', err);
+    } finally {
+      // Unlock mutex
+      unlock();
     }
   }
 }
