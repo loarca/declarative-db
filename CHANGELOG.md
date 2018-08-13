@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [1.0.1] - 2018-08-13
 ### Added
 - Mutex protection to saving to disk.
 - Smart scheduled saving.
@@ -14,4 +16,5 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Stateful database.
 - `compression` option.
 
-[Unreleased]: https://github.com/Loarca/declarative-db/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/Loarca/declarative-db/compare/v1.0.1...HEAD
+[1.0.1]: https://github.com/Loarca/declarative-db/compare/v1.0.0...v1.0.1
