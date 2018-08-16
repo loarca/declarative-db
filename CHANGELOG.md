@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.0.2] - 2018-08-16
+### Fixed
+- `initialState` now works as intended, it was always the initial state
+whether there was already a file or not (issue #7).
+
 ## [1.0.1] - 2018-08-13
 ### Added
 - Mutex protection to saving to disk.
@@ -16,5 +21,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Stateful database.
 - `compression` option.
 
-[Unreleased]: https://github.com/Loarca/declarative-db/compare/v1.0.1...HEAD
+[Unreleased]: https://github.com/Loarca/declarative-db/compare/v1.0.2...HEAD
+[1.0.2]: https://github.com/Loarca/declarative-db/compare/v1.0.1...v1.0.2
 [1.0.1]: https://github.com/Loarca/declarative-db/compare/v1.0.0...v1.0.1
