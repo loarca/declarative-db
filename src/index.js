@@ -10,8 +10,8 @@ module.exports =  async ({filename, compression, initialState}) => {
   compression = typeof compression === 'number' ? compression : 0;
 
   // Create state
-  const state = await generateState({filename, compression});
+  const state = await generateState({initialState, filename, compression});
 
   // Create proxied object
-  return generateObject({state, value: initialState});
+  return generateObject({state});
 };

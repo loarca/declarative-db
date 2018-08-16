@@ -71,7 +71,7 @@ class State {
   }
 }
 
-module.exports = async ({filename, compression}) => {
+module.exports = async ({initialState, filename, compression}) => {
   // Make sure compression option is valid
   if (typeof compression !== 'number' || compression < 0 || compression > 9)
     throw new Error(
@@ -79,7 +79,7 @@ module.exports = async ({filename, compression}) => {
     );
 
   // Determine initial state
-  let state = {};
+  let state = initialState;
   // If the file specified by filename exists, load contents
   try {
     let rawState = await promisify(fs.readFile)(filename);

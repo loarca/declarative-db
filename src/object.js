@@ -1,10 +1,5 @@
-module.exports = ({state, value}) => {
-  // Make sure value is an object
-  value = typeof value === 'object' && value !== null ? value : {};
-
-  // Set state
-  state.setState(value);
-
+module.exports = ({state}) => {
+  // Proxy handlers
   const handlers = {
 
     // When getting a property
@@ -33,5 +28,5 @@ module.exports = ({state, value}) => {
 
   };
 
-  return new Proxy(value, handlers);
+  return new Proxy(state.state, handlers);
 };
