@@ -1,6 +1,6 @@
 {
   "name": "declarative-db",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "An easy-to-use declarative json-based database for Node",
   "main": "src/index.js",
   "engines": {
