@@ -21,6 +21,6 @@ whether there was already a file or not (issue #7).
 - Stateful database.
 - `compression` option.
 
-[Unreleased]: https://github.com/Loarca/declarative-db/compare/v1.0.2...HEAD
-[1.0.2]: https://github.com/Loarca/declarative-db/compare/v1.0.1...v1.0.2
-[1.0.1]: https://github.com/Loarca/declarative-db/compare/v1.0.0...v1.0.1
+[Unreleased]: https://github.com/loarca/declarative-db/compare/v1.0.2...HEAD
+[1.0.2]: https://github.com/loarca/declarative-db/compare/v1.0.1...v1.0.2
+[1.0.1]: https://github.com/loarca/declarative-db/compare/v1.0.0...v1.0.1
