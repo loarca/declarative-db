@@ -29,7 +29,10 @@
     "simple",
     "node"
   ],
-  "author": "Alejandro Loarca",
+  "author": {
+    "name": "Alejandro Loarca",
+    "email": "ale.j.loarca@gmail.com"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/loarca/declarative-db/issues"
