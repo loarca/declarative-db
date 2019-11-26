@@ -2,12 +2,14 @@
   "name": "declarative-db",
   "version": "1.0.2",
   "description": "An easy-to-use declarative json-based database for Node",
-  "main": "src/index.js",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint src/*.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "engines": {
     "node": ">=8.6.0"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -20,6 +22,8 @@
     "db",
     "js",
     "javascript",
+    "ts",
+    "typescript",
     "disk",
     "easy",
     "simple",
@@ -32,7 +36,16 @@
   },
   "homepage": "https://github.com/loarca/declarative-db#readme",
   "devDependencies": {
-    "eslint": "^6.0.1"
+    "@types/node": "^12.12.14",
+    "@typescript-eslint/eslint-plugin": "^2.9.0",
+    "@typescript-eslint/parser": "^2.9.0",
+    "eslint": "^6.7.1",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "typescript": "^3.6.3"
   },
   "dependencies": {
     "async-mutex": "^0.1.3"
