@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.0.3] - 2019-11-26
+### Fixed
+- Refactor to use Typescript.
+
 ## [1.0.2] - 2018-08-16
 ### Fixed
 - `initialState` now works as intended, it was always the initial state
@@ -21,6 +25,7 @@ whether there was already a file or not (issue #7).
 - Stateful database.
 - `compression` option.
 
-[Unreleased]: https://github.com/loarca/declarative-db/compare/v1.0.2...HEAD
+[Unreleased]: https://github.com/loarca/declarative-db/compare/v1.0.3...HEAD
+[1.0.3]: https://github.com/loarca/declarative-db/compare/v1.0.2...v1.0.3
 [1.0.2]: https://github.com/loarca/declarative-db/compare/v1.0.1...v1.0.2
 [1.0.1]: https://github.com/loarca/declarative-db/compare/v1.0.0...v1.0.1
